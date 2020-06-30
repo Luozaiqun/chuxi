@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>除夕-风俗-导航栏</title>
+<style>
+*{
+	margin:0; 
+	padding:0;
+	}
+html{
+	height:100%;
+	}
+p{ 
+	padding:10px 0; 
+	}
+body{ 
+	min-height:100%; 
+	font-family:arial;
+	position:relative; 
+	}
+body.sideMenu{
+	margin:0; 
+	-webkit-transform:none;
+	transform:none; 
+	}
+
+#sideToggle{
+	display:none; 
+	}
+#sideToggle:checked + aside{ 
+	left:0; 
+	}
+#sideToggle:checked ~ #wrap{
+	padding-left:220px;
+	}
+#sideToggle:checked ~ #footer{
+	margin-left:200px;
+	}
+body > aside{
+	position:absolute; 
+	top:0; bottom:0; 
+	left:-220px;
+	width:220px; 
+	transition:0.2s ease-out; 
+	-webkit-transition:0.2s ease-out; 
+	}
+body > aside > h2{
+	color:#FFF;
+	text-align:center; 
+	font-weight:normal; 
+	padding:10px;
+	}
+#wrap{
+	margin-left:0; 
+	padding:10px;
+	transition:0.25s ease-out;
+	-webkit-transition:0.25s ease-out;
+	}
+  #wrap > label{
+	  display:inline-block;
+	}
+    #wrap > label{ 
+      background:#f1103a;
+      border-radius:50px;
+      color: #FFF;
+      cursor: pointer;
+      display: block;
+      font-family: Courier New;
+      font-size: 25px;
+      font-weight: bold;
+      width: 30px;
+      height: 30px;
+      line-height: 35px;
+      text-align: center;
+      text-shadow: 0 -4px;
+    }
+    #wrap > label:hover{ 
+		background:#000; 
+	}
+	.item{
+			margin-left: -40px;
+			margin-right: 50%;
+			margin-top: -16px;
+		}
+		.item .a1 {
+			height: 40px;
+			line-height: 40px;
+			padding-left: 50px;
+			font-family: 华文行楷;
+			font-size: 25px;
+			color: black;
+			background-color: #A00002;
+			border-bottom: 2px solid #F84246;
+		}
+		.a3{
+			text-decoration: none;
+		}
+	.item:hover .a1{
+		color: aliceblue;
+	}
+		.item .a2{
+			background-color: white;
+			opacity: 0;
+			height: 0px;
+			transition: height 1s;
+			
+		}
+	.item:hover .a2 {
+			height: 40px;
+		}
+	.a {
+		background-image:url("chuxi3.png");
+        background-position:center top;
+        background-size:100% 100%;
+        overflow: hidden;
+		height: 600px;;
+		width: 600px;
+		margin-left: 570px;
+	}
+</style>
+</head>
+<body>	
+<input type='checkbox' id='sideToggle'>
+<aside>
+	<h2>Menu</h2><br>
+	<div class="item">
+		<a href="nyf.html" class="a3"><p class="a1">年夜饭</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="tcl.html" class="a3"><p class="a1">贴春联</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="tch.html" class="a3"><p class="a1">贴窗花</p></a>
+		<p class="a2"></p>
+	</div>
+		<div class="item">
+		<a href="tfz.html" class="a3"><p class="a1">贴福字</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="tnh.html" class="a3"><p class="a1">贴年画</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="rbz.html" class="a3"><p class="a1">燃爆竹</p></a>
+		<p class="a2"></p>
+	</div>
+		<div class="item">
+		<a href="ysq.html" class="a3"><p class="a1">压岁钱</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="lwh.html" class="a3"><p class="a1">垒旺火</p></a>
+		<p class="a2"></p>
+	</div>
+	<div class="item">
+		<a href="jz.html" class="a3"><p class="a1">祭祖</p></a>
+		<p class="a2"></p>
+	</div>
+		<div class="item">
+		<a href="sf.html" class="a3"><p class="a1">上坟</p></a>
+		<p class="a2"></p>
+	</div>
+	</aside>
+	<div id='wrap'>
+		<label id='sideMenuControl' for='sideToggle'>=</label>
+		<p>目录</p>
+		
+	</div>
+ <div class="a">
+ </div>
+	
+</body>
+</html>
