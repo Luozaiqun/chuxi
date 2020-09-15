@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>除夕--贴春联</title>
+<style type="text/css">
+#div1 {
+	width:130px;
+	height:45px;
+	padding:10px;	
+	position: relative;
+	left: 50px;
+	top: 115px;
+	
+	
+	}
+	html {
+  height: 100%;
+	width: 100%;	
+  display: table;
+  
+}
+body{
+        margin:0;
+		padding:0;
+		width:100%;
+		height:100%;
+ }
+#p1 {
+     height:720px;;
+     width:1270px;
+	margin: auto;
+     display:flex;
+     background-image:url("door2.jpg");
+      background-position:center top;
+      background-size:100% 100%;
+      overflow: hidden;
+}
+	#p2{
+		position: relative;
+		top: 120px;
+		left: 185px;
+		font-size: 10px;
+		color: aliceblue;
+	}
+	#p4{
+		height: 500px;
+		width: 620px;
+		position: relative;
+		top: 225px;
+		margin-left: 15px;
+	}
+	#p3{
+		font-family: 隶书;
+		font-size:20px;
+		color: black;
+		text-decoration: none;
+		line-height: 27px;
+	}
+</style>
+<script>
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+function drag(ev)
+{
+	ev.dataTransfer.setData("Text",ev.target.id);
+	//dataTransfer.setData() 方法设置被拖数据的数据类型和值
+	//数据类型是"Text"，值是可拖动元素的 id ("drag1")
+}
+function drop(ev)
+{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<div id="p1">
+	<div id="p4">
+	<p id="p3">
+	&nbsp;&nbsp;&nbsp;&nbsp;春联也叫门对、春贴、对联等等，它以工整、对偶、简洁、精巧的文字描绘时代背景，抒发美好愿望，是我国特有的文学形式。每逢春节，无论城市还是农村，家家户户都要精选一副大红春联贴于门上，为节日增加喜庆气氛.这一习俗起于宋代，在明代开始盛行，到了清代，春联的思想性和艺术性都有了很大的提高.春联的种类比较多，依其使用场所，可分为门心、框对、横披、春条、斗方等。“门心”贴于门板上端中心部位；“框对”贴于左右两个门框上；“横披”贴于门媚的横木上；“春条”根据不同的内容，贴于相应的地方；“斗斤”<br>也叫“门叶”，为正方菱形，多贴在家俱、影壁中。
+	</p>
+		<a href="jrfs.html" id="p3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回上一页</a>
+		</div>
+<p id="p2">将"四季平安"拖到此处</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	</div>
+<br><!--ondragover 事件规定在何处放置被拖动的数据。-->
+<img id="drag1" src="cl.png" draggable="true" ondragstart="drag(event)" width="130" height="45" >
+<!--为了使元素可拖动，把draggable属性设置为true;
+ondragstart属性调用了一个函数，drag(event)，它规定了被拖动的数据-->
+</div>
+	</body>
+</html>
